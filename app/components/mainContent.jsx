@@ -30,3 +30,4 @@ const MainContent = ({ initialShowChatBox }) => {
 };
 
 export default MainContent;
+
