@@ -12,7 +12,6 @@ export default function Home() {
   <MainContent />
   <Chatbot />
   <Footer />
-
   </div>
   )
 }
