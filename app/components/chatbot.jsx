@@ -98,6 +98,10 @@ function Chatbot() {
           width: '85px',
           height: '85px',
           bgcolor: 'primary.main',
+          '@media (max-width:600px)': {
+            width: '50px',
+            height: '50px',
+          },
           color: 'white',
           '&:hover': { bgcolor: 'primary.dark' }
         }}
@@ -121,6 +125,12 @@ function Chatbot() {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
+            '@media (max-width:600px)': {
+              width: '95%',
+              maxWidth: '600px',
+              height: '85%',
+              bottom: 80,
+            },
             p: 2,
           }}
         >
