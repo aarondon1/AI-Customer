@@ -61,15 +61,14 @@ const MainContent = () => {
                         />
                     </Typography>
                 </Box>
-                <Box mb={1} sx={{ borderBottom: '1px solid #333', pb: 3 }}> {/* Decreased margin-bottom */}
-                    {/* Add any additional content or images here if needed */}
+                <Box mb={1} sx={{ borderBottom: '1px solid #333', pb: 3 }}> 
                 </Box>
                 <Box>
                     <Typography
                         variant="h4"
                         align="center"
                         gutterBottom
-                        sx={{ fontWeight: 500, mt: 1, fontSize: { xs: '1.5rem', md: '2rem' } }} // Decreased margin-top
+                        sx={{ fontWeight: 500, mt: 1, fontSize: { xs: '1.5rem', md: '2rem' } }} 
                     >
                         Virtual assistants reduce inquiries across calls, chats, and emails by <PercentageTypewriter start={0} end={70}/>
                     </Typography>
@@ -99,7 +98,6 @@ const MainContent = () => {
                     </Typography>
                 </Box>
                 <Box mt={4}>
-                    {/* Add any additional content or buttons here if needed */}
                 </Box>
             </Box>
         </Container>
