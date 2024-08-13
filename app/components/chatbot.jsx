@@ -6,12 +6,14 @@ import ChatIcon from '@mui/icons-material/Chat';
 import CloseIcon from '@mui/icons-material/Close';
 
 function Chatbot() {
+  console.log("Chatbot component rendered"); // Debugging log
   const [messages, setMessages] = useState([
-    {
-      role: 'assistant',
-      content: `Hi, I'm the Headstarter Support Agent, this is a demo of what can be on your website. How can I assist you today?`,
-    },
-  ]);
+
+  {
+    role: 'assistant',
+    content: `Hello! Welcome to our Chatbot demo. I'm here to show you what our chatbot can do. How can I assist you today?`,
+  }
+]);
 
   const [message, setMessage] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -150,7 +152,7 @@ function Chatbot() {
               sx={{ width: 48, height: 48, mr: 2 }}
             />
             <Typography variant="h6" color="white">
-              HeadstarterAI Conversation
+              Chatbot Demo
             </Typography>
           </Box>
           <Stack
