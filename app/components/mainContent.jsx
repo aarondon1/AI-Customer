@@ -1,33 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Button, Stack, Typography } from '@mui/material';
-import ChatBox from './ChatBox';
+"use client";
 
-const MainContent = ({ initialShowChatBox }) => {
-  const [showChatBox, setShowChatBox] = useState(initialShowChatBox);
-  const [hydrated, setHydrated] = useState(false); // New state to track hydration
+import {React, useState, useEffect } from 'react';
+import { Box, Typography, Container } from '@mui/material';
 
-  useEffect(() => {
-    setHydrated(true); // Mark the component as hydrated once the client-side JavaScript has loaded
-  }, []);
-
-  const handleButtonClick = () => {
-    setShowChatBox(!showChatBox);
-  };
-
-  if (!hydrated) {
-    return null; // Prevent rendering until hydration is complete
-  }
+const MainContent = () => {
 
   return (
-    <Box
-    display = "flex"
-    flexDirection = "column"
-    justifyContent = "center"
-    >
-
-    </Box>
-  )
+    <Container>
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+      >
+        <Box>
+          <Typography variant="h2" align="center">
+            Want an AI chatbot hello! helloooo helo! hello!! asdfasdf
+          </Typography>
+        </Box>
+      </Box>
+    </Container>
+  );
 };
 
 export default MainContent;
-
