@@ -6,12 +6,14 @@ import ChatIcon from '@mui/icons-material/Chat';
 import CloseIcon from '@mui/icons-material/Close';
 
 function Chatbot() {
+  console.log("Chatbot component rendered"); // Debugging log
   const [messages, setMessages] = useState([
-    {
-      role: 'assistant',
-      content: `Hi, I'm the Headstarter Support Agent, this is a demo of what can be on your website. How can I assist you today?`,
-    },
-  ]);
+
+  {
+    role: 'assistant',
+    content: `Hello! Welcome to our Chatbot demo. I'm here to show you what our chatbot can do. How can I assist you today?`,
+  }
+]);
 
   const [message, setMessage] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -97,18 +99,17 @@ function Chatbot() {
           zIndex: 1000,
           width: '85px',
           height: '85px',
-          bgcolor: 'primary.main',
+          bgcolor: '#5a293c',
           '@media (max-width:600px)': {
             width: '50px',
             height: '50px',
           },
           color: 'white',
-          '&:hover': { bgcolor: 'primary.dark' }
+          '&:hover': { bgcolor: '#b62779' }
         }}
       >
         {isOpen ? <CloseIcon fontSize="large" /> : <ChatIcon fontSize="large" />}
       </IconButton>
-
       {/* Chatbot UI */}
       {isOpen && (
         <Box
@@ -118,8 +119,8 @@ function Chatbot() {
             right: 16,
             width: '600px',
             height: '600px',
-            border: '1px solid black',
-            bgcolor: 'background.paper',
+            border: '1px solid #1b4b4b',
+            bgcolor: '#2c2d32',
             borderRadius: 4,
             boxShadow: 3,
             display: 'flex',
@@ -134,16 +135,15 @@ function Chatbot() {
             p: 2,
           }}
         >
-          {}
           <Box
             sx={{
               display: 'flex',
               alignItems: 'center',
               mb: 2,
               p: 1,
-              border: '1px solid #ccc', 
+              border: '1px solid #263437', 
               borderRadius: '8px',
-              bgcolor: 'background.default',
+              bgcolor: '#263437',
             }}
           >
             <Avatar
@@ -151,11 +151,10 @@ function Chatbot() {
               alt="HeadstarterAI"
               sx={{ width: 48, height: 48, mr: 2 }}
             />
-            <Typography variant="h6">
-              HeadstarterAI Conversation
+            <Typography variant="h6" color="white">
+              Chatbot Demo
             </Typography>
           </Box>
-
           <Stack
             direction="column"
             spacing={2}
@@ -172,7 +171,7 @@ function Chatbot() {
               >
                 <Box
                   bgcolor={
-                    message.role === 'assistant' ? 'primary.main' : 'secondary.main'
+                    message.role === 'assistant' ? '#1b4b4b' : '#5a293c'
                   }
                   color="white"
                   borderRadius={16}
@@ -189,13 +188,13 @@ function Chatbot() {
               fullWidth
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              sx={{ fontSize: '1.0rem' }}
-              InputProps={{ style: { fontSize: '1.0rem' } }} 
+              sx={{ fontSize: '1.0rem', bgcolor: '#263437', color: 'white' }}
+              InputProps={{ style: { fontSize: '1.0rem', color: 'white' } }} 
             />
             <Button
               variant="contained"
               onClick={sendMessage}
-              sx={{ fontSize: '1.1rem', borderRadius:"16px"}} 
+              sx={{ fontSize: '1.1rem', borderRadius:"16px", bgcolor: '#b62779', '&:hover': { bgcolor: '#5a293c' } }} 
             >
               Send
             </Button>
